@@ -7,7 +7,6 @@ def total_cash (pet_shop)
 end
 
 def add_or_remove_cash(pet_shop, cash)
-  #total = pet_shop[:admin][:total_cash] + cash
   pet_shop[:admin][:total_cash] += cash
 end
 
@@ -21,4 +20,14 @@ end
 
 def stock_count(pet_shop)
   pet_shop[:pets].count()
+end
+
+def pets_by_breed(pet_shop, breed)
+  breed_count = []
+  for pet in pet_shop[:pets]
+    if pet[:breed].include?(breed)
+      breed_count << (breed)
+    end
+  end
+  return breed_count
 end
