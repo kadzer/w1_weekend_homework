@@ -31,3 +31,13 @@ def pets_by_breed(pet_shop, breed)
   end
   return breed_count
 end
+
+def find_pet_by_name(pet_shop, name)
+  pets = {}
+  for pet in pet_shop[:pets]
+    if pet[:name].include?(name)
+    pets = pet
+    end
+  end
+return pets
+end
