@@ -32,8 +32,6 @@ def pets_by_breed(pet_shop, breed)
   return breed_count
 end
 
-# no luck with nil stupid_index += 1 p "great success!"
-
 def find_pet_by_name(pet_shop, name)
   for pet in pet_shop[:pets]
     if pet[:name] == name
@@ -50,4 +48,8 @@ def remove_pet_by_name(pet_shop, name)
     end
   end
   pet_shop[:pets].delete(pets)
+end
+
+def add_pet_to_stock(pet_shop, new_pet)
+  pet_shop[:pets].push(new_pet)
 end
