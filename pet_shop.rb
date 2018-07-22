@@ -57,3 +57,7 @@ end
 def customer_cash(index)
   index[:cash]
 end
+
+def remove_customer_cash(index, cash)
+  index[:cash] -= cash
+end
