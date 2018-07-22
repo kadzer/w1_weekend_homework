@@ -32,12 +32,17 @@ def pets_by_breed(pet_shop, breed)
   return breed_count
 end
 
+# no luck with nil stupid_index += 1 p "great success!"
+
 def find_pet_by_name(pet_shop, name)
-  pets = {}
   for pet in pet_shop[:pets]
-    if pet[:name].include?(name)
-    pets = pet
+    if pet[:name] == name
+      pets = {} && pets = pet
     end
   end
-return pets
+  return pets
+end
+
+def remove_pet_by_name(pet_shop, name)
+  pet_shop[:pets].delete(name)
 end
