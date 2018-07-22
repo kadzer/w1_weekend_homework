@@ -54,10 +54,14 @@ def add_pet_to_stock(pet_shop, new_pet)
   pet_shop[:pets].push(new_pet)
 end
 
-def customer_cash(index)
-  index[:cash]
+def customer_cash(customer)
+  customer[:cash]
 end
 
-def remove_customer_cash(index, cash)
-  index[:cash] -= cash
+def remove_customer_cash(customer, cash)
+  customer[:cash] -= cash
+end
+
+def customer_pet_count(customer)
+  customer[:pets].sum
 end
