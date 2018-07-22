@@ -63,5 +63,9 @@ def remove_customer_cash(customer, cash)
 end
 
 def customer_pet_count(customer)
-  customer[:pets].sum
+  customer[:pets].size
+end
+
+def add_pet_to_customer(customer, pet)
+  customer[:pets] << pet
 end
